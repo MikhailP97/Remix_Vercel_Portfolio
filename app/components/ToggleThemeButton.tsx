@@ -21,7 +21,7 @@ export default function ToggleThemeButton({ currentTheme } : any) {
     return (
         <Form action="/preferences/theme" method="POST">
             <input type="hidden" name="theme" value={themeToToggleTo} />
-            <button className='flex justify-center items-center'>{currentTheme === 'dark' ? <Sun /> : <Moon />}</button>
+            <button aria-label="Theme" className='flex justify-center items-center'>{currentTheme === 'dark' ? <Sun /> : <Moon />}</button>
         </Form>
     )
 }

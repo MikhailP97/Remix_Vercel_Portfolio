@@ -1,5 +1,3 @@
-import { Link } from "@remix-run/react";
-
 function scroll(elmnt: string) {
     document.getElementById(elmnt)?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
 }

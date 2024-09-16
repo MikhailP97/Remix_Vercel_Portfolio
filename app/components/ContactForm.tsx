@@ -98,15 +98,15 @@ export default function ContactForm() {
         ref={form} onSubmit={sendEmail}
       >
         <div className={`flex flex-col items-center gap-4 ${formInView ? 'animate-fadeBottom' : ''}`} ref={formRef}>
-          <input className="contact-input h-8" placeholder='Name' type='text' name="name" value={name} onChange={(e) => setName(e.target.value)} />
-          <input className={`rounded-md bg-stone-100 text-xs text-[#222831] border-2 ${errors.email ? 'border-red-800' : 'border-[#222831]'} focus:outline-none focus:ring-1 dark:focus:ring-2 focus:ring-[#222831] dark:focus:ring-[#f1d2b5] w-64 sm:w-80 md:w-96 xl:w-1/3 2xl:w-1/4 p-2 h-8`} placeholder='Email*' value={email} onChange={(e) => setEmail(e.target.value)} name="email" />
+          <input className="contact-input h-8" placeholder='Name' type='text' name="name" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name"/>
+          <input className={`rounded-md bg-stone-100 text-xs text-[#222831] border-2 ${errors.email ? 'border-red-800' : 'border-[#222831]'} focus:outline-none focus:ring-1 dark:focus:ring-2 focus:ring-[#222831] dark:focus:ring-[#f1d2b5] w-64 sm:w-80 md:w-96 xl:w-1/3 2xl:w-1/4 p-2 h-8`} placeholder='Email*' value={email} onChange={(e) => setEmail(e.target.value)} name="email" autoComplete="email"/>
           {errors.email && <p className="text-red-800 text-xs">{errors.email}</p>}
-          <input className="contact-input h-8" placeholder='Subject' type='text' name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
+          <input className="contact-input h-8" placeholder='Subject' type='text' name="subject" value={subject} onChange={(e) => setSubject(e.target.value)} autoComplete="subject"/>
           <textarea className={`rounded-md bg-stone-100 text-xs text-[#222831] border-2 ${errors.message ? 'border-red-800' : 'border-[#222831]'} focus:outline-none focus:ring-1 dark:focus:ring-2 focus:ring-[#222831] dark:focus:ring-[#f1d2b5] w-64 sm:w-80 md:w-96 xl:w-1/3 2xl:w-1/4 p-2 h-48`} placeholder='Message*' value={message} onChange={(e) => setMessage(e.target.value)} name="message" />
           {errors.message && <p className="text-red-800 text-xs">{errors.message}</p>}
         </div>
         <div className="flex justify-center">
-          <button type="submit" className="py-1 px-6 sm:px-8 shadow-md hover:shadow-none focus:shadow-none shadow-[#222831] dark:shadow-[#FEFAF6] mt-4 sm:mt-6 rounded-md text-sm text-[#222831] dark:text-[#FEFAF6] font-medium border-2 border-[#222831] dark:border-[#FEFAF6] focus:outline-none hover:outline-none hover:font-semibold focus:font-semibold">Send</button>
+          <button type="submit" aria-label="Send" className="py-1 px-6 sm:px-8 shadow-md hover:shadow-none focus:shadow-none shadow-[#222831] dark:shadow-[#FEFAF6] mt-4 sm:mt-6 rounded-md text-sm text-[#222831] dark:text-[#FEFAF6] font-medium border-2 border-[#222831] dark:border-[#FEFAF6] focus:outline-none hover:outline-none hover:font-semibold focus:font-semibold">Send</button>
         </div>
       </form >
       <div className="flex flex-row justify-center mt-6">
