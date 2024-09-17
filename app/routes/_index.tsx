@@ -9,8 +9,8 @@ import { client } from "~/utils/graphqlClient";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Mykhaylo Pelykh | Portfolio" },
+    { name: "description", content: "Portfolio of Mykhaylo Pelykh" },
   ];
 };
 
