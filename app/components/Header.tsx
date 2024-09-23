@@ -9,10 +9,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ toggleButton }) => {
     return (
         <header className="border-b header-footer-bg" id="header">
-            <div className="header-footer-width">
+            <div className="container mx-auto lg:max-w-screen-lg px-4 py-2 sm:px-4 sm:py-1 lg:px-8">
                 <div className="flex flex-row items-center justify-between gap-2 w-full">
                     <div>
-                        <h1 className="text-xl font-bold sm:text-2xl">MP</h1>
+                        <h1 className="text-2xl font-bold">MP</h1>
                     </div>
                     <div className="flex items-center gap-4">
                         { toggleButton }

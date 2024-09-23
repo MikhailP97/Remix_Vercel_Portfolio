@@ -22,14 +22,14 @@ body {
 .header-footer-bg {
     @apply border-[#f0e2d5] bg-[#f8f2ec] dark:border-[#1a2433] dark:bg-[#1d232c];
 }
-.header-footer-width {
+.footer-width {
     @apply container mx-auto lg:max-w-screen-lg px-2 py-1 sm:px-4 sm:py-1 lg:px-8;
 }
 .header-menu-items-hover {
     @apply transition hover:text-[#335e9e] dark:hover:text-[#f1d2b5] cursor-pointer;
 }
 .home-icons-display {
-    @apply flex flex-row justify-center items-center gap-6 lg:gap-8 flex-wrap;
+    @apply flex flex-row justify-center items-center gap-6 lg:gap-8 flex-wrap px-6 sm:px-0;
 }
 .home-icons-display-group {
     @apply flex flex-row gap-2;

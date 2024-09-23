@@ -5,7 +5,7 @@ function scroll(elmnt: string) {
 export default function Footer({currentYear} : { currentYear: number }) {
     return (
         <footer className="border-t header-footer-bg">
-            <div className="header-footer-width">
+            <div className="footer-width">
                 <div className="flex items-center justify-between">
                     <h1 className="text-xl font-bold sm:text-2xl cursor-pointer" onClick={() => scroll("header")}>MP</h1>
                     <p className="text-center text-xs lg:mt-0 lg:text-right">
